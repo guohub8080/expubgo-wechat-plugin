@@ -1,0 +1,49 @@
+# ---- Build output ----
+# dev/pack.sh artifacts — never commit packaged extensions
+dist/
+*.zip
+
+# ---- Extension packaging secrets (NEVER commit) ----
+# Chrome/Edge 打包私钥与签名产物，泄漏即被冒发扩展
+*.pem
+*.crx
+
+# ---- Dependencies（将来加工具链时兜底）----
+node_modules/
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Env / secrets ----
+.env
+.env.*
+*.local
+
+# ---- IDE / editor ----
+.idea/
+.vscode/
+.zcode/
+.cursor/
+.fleet/
+.claude/
+*.swp
+*.swo
+*~
+
+# ---- OS ----
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# ---- AI 工具产物（本地，不入库）----
+.mimosa/
+.video_agent/
+
+# ---- AI 约定文件（本地，不入库；想公开则删除本节）----
+AGENTS.md
+CLAUDE.md

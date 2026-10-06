@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- dev/render-icon.html — rasterize dev/icon.svg into a square PNG of any size.
+     Usage (repo root, size N = 16/32/48/128/300):
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+       --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
+       --default-background-color=00000000 --window-size=N,N \
+       --screenshot=icons/iconN.png "file://$(pwd)/dev/render-icon.html?s=N"
+     Transparent background: the SVG keeps its alpha; the PNG is exact N*N. -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: transparent; }
+  img { display: block; }
+</style>
+</head>
+<body>
+  <img id="icon" src="icon.svg">
+  <script>
+    const s = new URLSearchParams(location.search).get('s') || '48'
+    const img = document.getElementById('icon')
+    img.width = s
+    img.height = s
+    img.style.width = s + 'px'
+    img.style.height = s + 'px'
+  </script>
+</body>
+</html>

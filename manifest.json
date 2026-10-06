@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+  "name": "ExPubGo微信助手",
+  "version": "0.3.2",
+  "description": "ExPubGo的微信助手，可以方便微信编辑功能",
+  "minimum_chrome_version": "111",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*",
+        "https://*.pages.dev/*",
+        "https://*.vercel.app/*",
+        "https://*.netlify.app/*",
+        "file:///*"
+      ],
+      "js": [
+        "content-expubgo.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://mp.weixin.qq.com/*"
+      ],
+      "js": [
+        "page-bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://mp.weixin.qq.com/*"
+      ],
+      "js": [
+        "content-wechat.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://mp.weixin.qq.com/*",
+    "https://mmbiz.qpic.cn/*",
+    "https://mmbiz.qlogo.cn/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "https://guohub.top/*",
+    "https://*.guohub.top/*",
+    "https://guohub8080.github.io/*",
+    "https://*.pages.dev/*",
+    "https://*.vercel.app/*",
+    "https://*.netlify.app/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

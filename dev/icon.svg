@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" version="1.1" viewBox="0 0 595.3 596.1">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #4DD0E1;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st2 {
+        fill: #1976D2;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st1" d="M297.6,20.3L51.6,162.3v284.1l246,142,246-142V162.3L297.6,20.3Z"/>
+    <path class="st2" d="M106.3,225.4v189.4l164,94.7v-189.4l-164-94.7ZM243,51.8l54.7-31.6,246,142v31.6l-218.7,126.3v189.4s164-94.7,164-94.7v-63.1l-109.3,63.1v-63.1l164-94.7v189.4s-246,142-246,142L51.6,446.4V162.3l27.3-15.8,218.7,126.3,164-94.7L243,51.8Z"/>
+  </g>
+  <polygon class="st0" points="79 146.5 297.6 20.3 297.6 272.8 79 146.5"/>
+</svg>
