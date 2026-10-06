@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ExPubGo微信助手",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "ExPubGo的微信助手，可以方便微信编辑功能",
   "minimum_chrome_version": "111",
   "permissions": [
@@ -51,8 +51,8 @@
   },
   "host_permissions": [
     "https://mp.weixin.qq.com/*",
-    "https://mmbiz.qpic.cn/*",
-    "https://mmbiz.qlogo.cn/*",
+    "*://mmbiz.qpic.cn/*",
+    "*://mmbiz.qlogo.cn/*",
     "http://localhost/*",
     "http://127.0.0.1/*",
     "https://guohub.top/*",
