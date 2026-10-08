@@ -13,7 +13,7 @@ Chrome / Edge 浏览器扩展（Manifest V3）：把 [ExPubGo](https://guohub808
 
 ### 方式一：商店安装（推荐）
 
-Edge：在 Microsoft Edge 加载项商店搜索「ExPubGo微信助手」（审核中）。
+Edge：<https://microsoftedge.microsoft.com/addons/detail/nbpemcmeidndafddcdoajmdegjaemdef>（或搜索「ExPubGo微信助手」）
 
 ### 方式二：开发者模式加载
 
