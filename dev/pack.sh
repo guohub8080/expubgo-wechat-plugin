@@ -15,6 +15,6 @@ OUT="dist/expubgo-wechat-plugin-v${VERSION}.zip"
 
 mkdir -p dist
 rm -f "$OUT"
-zip -r "$OUT" manifest.json background.js content-expubgo.js content-wechat.js page-bridge.js icons/icon16.png icons/icon32.png icons/icon48.png icons/icon128.png > /dev/null
+zip -r "$OUT" manifest.json _locales/zh_CN/messages.json _locales/en/messages.json background.js content-expubgo.js content-wechat.js page-bridge.js icons/icon16.png icons/icon32.png icons/icon48.png icons/icon128.png > /dev/null
 echo "[pack] wrote $OUT"
 unzip -l "$OUT"

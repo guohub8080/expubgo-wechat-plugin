@@ -28,7 +28,7 @@ Edge：在 Microsoft Edge 加载项商店搜索「ExPubGo微信助手」（审�
 2. 打开公众号图文编辑器，页面右侧出现「ExPubGo 微信助手」面板
 3. 点击「一键导入」完成填写
 
-支持从这些页面发送：`localhost` / `127.0.0.1`、`*.pages.dev` / `*.vercel.app` / `*.netlify.app`（三大托管平台的任意部署）、本地导出的单页 HTML（`file://`，需在扩展详情中开启「允许访问文件网址」）。
+支持从这些页面发送：`localhost` / `127.0.0.1`（http+https）、`*.github.io` / `*.pages.dev` / `*.vercel.app` / `*.netlify.app`（托管平台的任意部署）、本地导出的单页 HTML（`file://`，需在扩展详情中开启「允许访问文件网址」）。
 
 ## 工作原理
 
@@ -51,7 +51,8 @@ ExPubGo 页面 postMessage ──► content-expubgo.js ──► chrome.storage
 仓库无构建链，源码即产物：
 
 ```
-├── manifest.json          # MV3 配置
+├── manifest.json          # MV3 配置（i18n：__MSG__ + default_locale zh_CN）
+├── _locales/              # zh_CN / en 文案（商店按此识别 listing 语言）
 ├── background.js          # Referer 会话规则（service worker）
 ├── content-expubgo.js     # ExPubGo 侧：hello 探测 + 文章转发
 ├── page-bridge.js         # 微信编辑器主世界桥接层（JSAPI）
@@ -66,6 +67,16 @@ ExPubGo 页面 postMessage ──► content-expubgo.js ──► chrome.storage
 ```bash
 dev/pack.sh        # 产物：dist/expubgo-wechat-plugin-v<version>.zip（已 gitignore）
 ```
+
+### 商店上架文案（提交 Partner Center / CWS 时直接粘贴，两个语言各 ≥250 字符）
+
+**简体中文（zh-CN）**
+
+> ExPubGo微信助手是一款为内容创作者打造的浏览器扩展，连接 ExPubGo 本地发布工具与微信公众号编辑器。在 ExPubGo 中一键即可将文章的标题、摘要与富文本正文送入公众号编辑器侧栏面板，点击「一键导入」自动填充，免去手动复制粘贴与格式错乱的烦恼。扩展同时解决微信公众号图床（mmbiz.qpic.cn / mmbiz.qlogo.cn）的防盗链问题，让文章配图在编辑器预览中正常显示；正文写入优先调用微信编辑器内部接口，兼容性与保存正确性更有保障。支持本地 localhost、GitHub Pages 以及 Cloudflare Pages / Vercel / Netlify 托管的 ExPubGo 站点。完全本地运行，不收集任何用户数据。
+
+**English（en）**
+
+> ExPubGo WeChat Helper bridges your ExPubGo publishing tool and the WeChat Official Account editor. With one click on the ExPubGo side, the article title, digest and rich-text body are sent straight to a sidebar panel inside the mp.weixin.qq.com editor, where one-click import fills everything in — no more manual copy-paste or broken formatting. The extension also restores preview images served by WeChat's hotlink-protected CDN (mmbiz.qpic.cn / mmbiz.qlogo.cn), so embedded pictures show up correctly while editing. Body writing prefers the editor's internal JSAPI for maximum fidelity, with a battle-tested DOM fallback. Works with ExPubGo deployed on localhost, GitHub Pages, Cloudflare Pages, Vercel and Netlify. Runs entirely locally and collects no user data.
 
 ## 免责声明
 

@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "ExPubGo WeChat Helper",
+    "description": "Extension name shown in store listings and the browser's extension page"
+  },
+  "extensionDescription": {
+    "message": "A WeChat helper for ExPubGo: send articles straight into the WeChat Official Account editor.",
+    "description": "Short description (manifest description field; Short description on the Edge store)"
+  }
+}

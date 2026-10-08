@@ -26,8 +26,8 @@
  *   refreshed): the reply still goes out so "installed but stale" is distinguishable
  *   from "not installed".
  *
- * Runs on localhost, the *.pages.dev / *.vercel.app / *.netlify.app mirrors, and
- * file:// pages (an exported single-page HTML). file:// needs the extension's
+ * Runs on localhost (http and https), the *.github.io / *.pages.dev /
+ * *.vercel.app / *.netlify.app mirrors, and file:// pages (an exported single-page HTML). file:// needs the extension's
  * "Allow access to file URLs" toggle enabled in chrome://extensions, and its
  * origin serializes as either "file://" or the opaque "null" — isSelfMessage
  * below accepts both so the exported page can still talk to the plugin.

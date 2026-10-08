@@ -41,7 +41,7 @@ const INITIATOR_ALLOWLIST = [
   'localhost',                // local dev (expubgo dev preview, pub:serve source, etc.)
   'mp.weixin.qq.com',        // the WeChat editor itself (domain-level match covers all paths; images inside imported content also need the Referer)
   'guohub.top',               // all subdomains (assets.guohub.top etc.); dev.guohub.top tunnel also routes local 6768
-  'guohub8080.github.io',     // expubgo GitHub Pages mirror (path /expubgo/)
+  'github.io',                // EVERY GitHub Pages site (platform-wide, like the three hosts below); expubgo mirror lives at guohub8080.github.io/expubgo/
   'pages.dev',                // EVERY Cloudflare Pages site (platform-wide; subdomains included by domain matching)
   'vercel.app',               // every Vercel deployment; custom Vercel domains cannot be enumerated — add them individually if used
   'netlify.app',              // every Netlify site (platform-wide)

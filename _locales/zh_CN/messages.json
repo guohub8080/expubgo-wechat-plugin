@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "ExPubGo微信助手",
+    "description": "扩展名（商店 listing 与浏览器扩展页显示）"
+  },
+  "extensionDescription": {
+    "message": "ExPubGo的微信助手，可以方便微信编辑功能",
+    "description": "扩展短描述（manifest description 字段，Edge 商店的 Short description）"
+  }
+}
